@@ -1,0 +1,21 @@
+{
+  "name": "@hlsitechio/mcp-docs",
+  "version": "1.0.0",
+  "description": "MCP Documentation Library Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "mcp",
+    "documentation",
+    "ai",
+    "claude"
+  ],
+  "author": "hlsitechio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hlsitechio/MCPs.git"
+  }
+}
