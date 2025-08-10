@@ -1,0 +1,32 @@
+{
+  "name": "mcp-documentation-server",
+  "version": "1.0.0",
+  "description": "MCP Documentation Server with proper protocol implementation",
+  "main": "mcp-server.js",
+  "scripts": {
+    "start": "node mcp-server.js",
+    "dev": "nodemon mcp-server.js",
+    "test": "node test-server.js",
+    "deploy:vercel": "vercel",
+    "deploy:railway": "railway up",
+    "deploy:render": "render deploy"
+  },
+  "keywords": [
+    "mcp",
+    "documentation",
+    "api",
+    "server"
+  ],
+  "author": "hlsitechio",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
