@@ -1,0 +1,39 @@
+name: Update MCP Documentation
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/**'
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Update Statistics
+      run: |
+        # Count documents
+        DOCS_COUNT=$(jq '. | length' data/documents.json)
+        echo "Documents: $DOCS_COUNT"
+        
+        # Update README badge
+        sed -i "s/docs-[0-9]*/docs-$DOCS_COUNT/g" README.md || true
+        
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update statistics"
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
