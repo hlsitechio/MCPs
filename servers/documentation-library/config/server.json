@@ -1,0 +1,12 @@
+{
+  "name": "documentation-library",
+  "version": "1.0.0",
+  "description": "MCP server for documentation library",
+  "dataUrl": "https://raw.githubusercontent.com/hlsitechio/MCPs/main/servers/documentation-library/data/documents.json",
+  "features": {
+    "search": true,
+    "categories": true,
+    "tags": true,
+    "fullTextSearch": true
+  }
+}

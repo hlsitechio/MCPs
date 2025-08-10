@@ -1,0 +1,12 @@
+{
+  "documentation-library": {
+    "image": "hlsitechio/mcp-documentation:latest",
+    "volumes": {
+      "/data": "./data"
+    },
+    "environment": {
+      "MCP_MODE": "server",
+      "DATA_SOURCE": "github"
+    }
+  }
+}
