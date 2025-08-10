@@ -1,39 +1,57 @@
-# MCP Servers Repository
+# Available MCP Servers
 
-## 📁 Repository Organization
+## 🚀 Quick Setup
 
-This repository is organized to support multiple MCP servers and documentation types.
+Copy any configuration below to your `claude_desktop_config.json`:
 
-### Structure
 
-```
-MCPs/
-├── servers/                    # MCP server implementations
-│   ├── documentation-library/  # Main documentation server
-│   ├── code-assistant/        # Code assistance server
-│   ├── api-integration/       # API integration server
-│   └── knowledge-base/        # Knowledge base server
-│
-├── documentation/             # Organized documentation
-│   ├── by-category/          # Documents organized by category
-│   ├── by-source/           # Documents organized by source
-│   └── by-technology/       # Documents organized by technology
-│
-├── dashboard/                # Dashboard application files
-│   ├── components/          # React components
-│   ├── services/           # Service implementations
-│   └── configs/           # Configuration files
-│
-├── templates/              # Configuration templates
-├── scripts/               # Utility scripts
-└── examples/             # Usage examples
+### Docs Z Ai
+- **Documents**: 13
+- **Description**: Documentation for docs z ai
+
+```json
+{
+  "mcpServers": {
+    "docs-docs_z_ai": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--data-url",
+        "https://raw.githubusercontent.com/hlsitechio/MCPs/main/documentation/by-category/docs_z_ai/documents.json"
+      ]
+    }
+  }
+}
 ```
 
-## 🚀 Quick Start
+---
 
-### For Claude Desktop
+### Other
+- **Documents**: 2
+- **Description**: Documentation for other
 
-Add this to your `claude_desktop_config.json`:
+```json
+{
+  "mcpServers": {
+    "docs-other": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--data-url",
+        "https://raw.githubusercontent.com/hlsitechio/MCPs/main/documentation/by-category/other/documents.json"
+      ]
+    }
+  }
+}
+```
+
+---
+
+### documentation-library
+- **Documents**: 15
+- **Description**: MCP server for documentation library
 
 ```json
 {
@@ -51,64 +69,46 @@ Add this to your `claude_desktop_config.json`:
 }
 ```
 
-## 📊 Current Statistics
 
-- **Total Documents**: 15
-- **Categories**: 2
-- **Last Updated**: 2025-08-10T16:29:03.178Z
+## 📦 All-in-One Configuration
 
-## 🔧 Available Servers
+To add all servers at once:
 
-### 1. Documentation Library
-- **Path**: `/servers/documentation-library`
-- **Purpose**: Stores and serves documentation
-- **Features**: Search, categories, tags, full-text search
-
-### 2. Code Assistant (Coming Soon)
-- **Path**: `/servers/code-assistant`
-- **Purpose**: Code generation and assistance
-
-### 3. API Integration (Coming Soon)
-- **Path**: `/servers/api-integration`
-- **Purpose**: API documentation and testing
-
-### 4. Knowledge Base (Coming Soon)
-- **Path**: `/servers/knowledge-base`
-- **Purpose**: Articles, tutorials, and references
-
-## 📚 Documentation Organization
-
-### By Category
-- `docs_z_ai`: Z.AI documentation
-- `api_reference`: API references
-- `guides`: User guides
-- `tutorials`: Step-by-step tutorials
-- `other`: Miscellaneous documentation
-
-### By Source
-- `github`: GitHub documentation
-- `official-docs`: Official documentation
-- `community`: Community contributions
-- `internal`: Internal documentation
-
-### By Technology
-- `react`: React documentation
-- `nodejs`: Node.js documentation
-- `python`: Python documentation
-- `ai-ml`: AI/ML documentation
-- `web-apis`: Web API documentation
-
-## 🛠️ Scripts
-
-- `setup/`: Setup and installation scripts
-- `migration/`: Data migration scripts
-- `validation/`: Validation and testing scripts
-- `deployment/`: Deployment scripts
-
-## 📝 License
-
-MIT
+```json
+{
+  "mcpServers": {
+    "docs-docs_z_ai": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--data-url",
+        "https://raw.githubusercontent.com/hlsitechio/MCPs/main/documentation/by-category/docs_z_ai/documents.json"
+      ]
+    },
+    "docs-other": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--data-url",
+        "https://raw.githubusercontent.com/hlsitechio/MCPs/main/documentation/by-category/other/documents.json"
+      ]
+    },
+    "documentation-library": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--data-url",
+        "https://raw.githubusercontent.com/hlsitechio/MCPs/main/servers/documentation-library/data/documents.json"
+      ]
+    }
+  }
+}
+```
 
 ---
 
-*Organized by Dashboard MCP Manager*
+*Auto-generated by MCP Server Manager*  
+*Last Updated: 2025-08-10T16:35:51.444Z*

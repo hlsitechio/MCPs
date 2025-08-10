@@ -1,0 +1,20 @@
+[
+  {
+    "name": "docs-docs_z_ai",
+    "displayName": "Docs Z Ai",
+    "documents": 13,
+    "url": "https://raw.githubusercontent.com/hlsitechio/MCPs/main/documentation/by-category/docs_z_ai/documents.json"
+  },
+  {
+    "name": "docs-other",
+    "displayName": "Other",
+    "documents": 2,
+    "url": "https://raw.githubusercontent.com/hlsitechio/MCPs/main/documentation/by-category/other/documents.json"
+  },
+  {
+    "name": "documentation-library",
+    "displayName": "documentation-library",
+    "documents": 15,
+    "url": "https://raw.githubusercontent.com/hlsitechio/MCPs/main/servers/documentation-library/data/documents.json"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "docs-docs_z_ai": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--data-url",
+        "https://raw.githubusercontent.com/hlsitechio/MCPs/main/documentation/by-category/docs_z_ai/documents.json"
+      ]
+    },
+    "docs-other": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--data-url",
+        "https://raw.githubusercontent.com/hlsitechio/MCPs/main/documentation/by-category/other/documents.json"
+      ]
+    },
+    "documentation-library": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--data-url",
+        "https://raw.githubusercontent.com/hlsitechio/MCPs/main/servers/documentation-library/data/documents.json"
+      ]
+    }
+  }
+}

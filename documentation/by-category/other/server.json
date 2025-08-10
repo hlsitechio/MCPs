@@ -1,0 +1,7 @@
+{
+  "name": "docs-other",
+  "version": "1.0.0",
+  "description": "Documentation for other",
+  "dataUrl": "https://raw.githubusercontent.com/hlsitechio/MCPs/main/documentation/by-category/other/documents.json",
+  "documentCount": 2
+}
